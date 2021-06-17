@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "author": "Vivian Guillen",
+  "license": "MIT",
+  "scripts": {
+    "css": "postcss ./style.css -o ./style.min.css --verbose",
+    "develop": "concurrently 'npm:css -- --watch'",
+    "build": "npm run css -- --env 'production'"
+
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.2.6",
+    "concurrently": "^6.2.0",
+    "cssnano": "^5.0.6",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-nested": "^5.0.5",
+    "tailwindcss": "^2.2.0"
+  }
+}
